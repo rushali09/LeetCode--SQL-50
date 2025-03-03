@@ -1,3 +1,5 @@
+#Solving leetcode question SQL 50 challenge
+
 # Write your MySQL query statement below
 SELECT V.CUSTOMER_ID, COUNT(V.CUSTOMER_ID) AS COUNT_NO_TRANS
 FROM VISITS AS V
