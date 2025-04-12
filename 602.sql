@@ -1,0 +1,15 @@
+# Write your MySQL query statement below
+
+SELECT ID, COUNT(*) AS NUM
+
+
+FROM (SELECT REQUESTER_ID AS ID
+FROM RequestAccepted
+
+UNION ALL
+
+SELECT ACCEPTER_ID
+FROM RequestAccepted) AS FRIEND_COUNT
+GROUP BY ID
+ORDER BY NUM DESC
+LIMIT 1
