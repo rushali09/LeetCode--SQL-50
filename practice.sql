@@ -54,6 +54,15 @@ WHERE T.TRANSACTION_ID IS NULL
 GROUP BY CUSTOMER_ID
 --
 
+--197. Rising Temperature
+SELECT W1.id
+FROM Weather W1
+JOIN Weather W2
+  ON DATEDIFF(W1.recordDate, W2.recordDate) = 1
+WHERE W1.temperature > W2.temperature;
+--
+
+
 
 
 
