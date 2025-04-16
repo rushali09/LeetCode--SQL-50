@@ -181,7 +181,11 @@ GROUP BY PLAYER_ID)
 --
 
 
-
+--2356 Number of Unique Subjects Taught by Each Teacher
+SELECT TEACHER_ID, COUNT(DISTINCT SUBJECT_ID) AS CNT
+FROM TEACHER
+GROUP BY TEACHER_ID
+--
 
 
 
