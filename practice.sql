@@ -253,8 +253,10 @@ HAVING COUNT(*) = 1)
 OR PRIMARY_FLAG = 'Y'
 --
 
-
-
+--610. Triangle Judgement
+SELECT *, IF(X+Y>Z AND Y+Z>X AND X+Z>Y,'Yes', 'No') AS TRIANGLE
+FROM TRIANGLE
+--
 
 
 
