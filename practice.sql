@@ -260,7 +260,7 @@ FROM TRIANGLE
 
 
 --180. Consecutive Numbers
-SELECT L1.NUM AS ConsecutiveNums
+SELECT distinct L1.NUM AS ConsecutiveNums
 FROM LOGS L1, LOGS L2, LOGS L3
 WHERE 
 L1.ID = L2.ID -1 AND L2.ID = L3.ID -1
