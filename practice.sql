@@ -329,7 +329,10 @@ WHERE SALARY<30000 AND MANAGER_ID NOT IN (SELECT EMPLOYEE_ID FROM EMPLOYEES)
 ORDER BY EMPLOYEE_ID
 --
 
-
+--1527. Patients With a Condition
+SELECT * FROM Patients
+ WHERE conditions like '% DIAB1%' OR conditions like'DIAB1%'
+--
 
 
 
