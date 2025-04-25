@@ -334,6 +334,13 @@ SELECT * FROM Patients
  WHERE conditions like '% DIAB1%' OR conditions like'DIAB1%'
 --
 
+--196. Delete Duplicate Emails
+DELETE P1 
+FROM PERSON P1 
+INNER JOIN PERSON P2
+WHERE P1.EMAIL = P2.EMAIL
+AND P1.ID > P2.ID
+--
 
 
 
