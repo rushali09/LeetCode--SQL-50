@@ -456,6 +456,17 @@ HAVING COUNT(*) = 1
 
 
 
+--185. Department Top Three Salaries
+SELECT d.name AS Department, e.name AS Employee, e.salary AS Salary
+FROM (SELECT  *, 
+        Dense_Rank() OVER (PARTITION BY departmentId ORDER BY SALARY DESC ) AS RNK
+FROM EMPLOYEE) AS E
+INNER JOIN DEPARTMENT D
+ON E.departmentId = D.ID
+WHERE RNK <=3
+--
+
+
 
 
 
