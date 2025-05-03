@@ -1,3 +1,5 @@
+-- 50 SQL questions LeetCode-- 
+
 --1757. Recyclable and Low Fat Products
 SELECT PRODUCT_ID
 FROM PRODUCTS
@@ -496,7 +498,13 @@ GROUP BY SELL_DATE
 ORDER BY SELL_DATE, PRODUCTS
 --
 
+--1517. Find Users With Valid E-Mails
+SELECT *
+FROM USERS
+WHERE MAIL REGEXP '^[A-Za-z][A-Za-z0-9_\.\-]*@LEETCODE[.]COM$'
+--
 
+-- 50 SQL questions solved LeetCode --
 
 
 
