@@ -507,6 +507,21 @@ WHERE MAIL REGEXP '^[A-Za-z][A-Za-z0-9_\.\-]*@LEETCODE[.]COM$'
 -- 50 SQL questions solved LeetCode --
 
 --Revision of SQL Questions--
+--Matching Validating string patterns--
+SELECT *
+FROM USERS
+WHERE MAIL REGEXP '^[a-zA-Z][a-zA-Z0-9_\.\-]*@LEETCODE[.]COM$'
+--
+
+--Aggregate and grouping
+SELECT PRODUCT_NAME, SUM(UNIT) AS UNIT
+FROM PRODUCTS 
+LEFT JOIN ORDERS USING(PRODUCT_ID)
+WHERE MONTH(ORDER_DATE)= '02' AND YEAR(ORDER_DATE)= '2020'
+GROUP BY PRODUCT_NAME
+HAVING UNIT >=100
+--
+
 
 
 
