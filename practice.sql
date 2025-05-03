@@ -506,7 +506,7 @@ WHERE MAIL REGEXP '^[A-Za-z][A-Za-z0-9_\.\-]*@LEETCODE[.]COM$'
 
 -- 50 SQL questions solved LeetCode --
 
-
+--Revision of SQL Questions--
 
 
 
