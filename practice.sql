@@ -558,6 +558,11 @@ WHERE P1.ID > P2.ID
 AND P1.EMAIL = P2.EMAIL
 --
 
+--1527. Patients With a Condition
+SELECT * FROM Patients
+ WHERE conditions like '% DIAB1%' OR conditions like'DIAB1%'
+--
+
 
 
 
