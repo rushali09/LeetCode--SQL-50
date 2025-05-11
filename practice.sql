@@ -590,6 +590,34 @@ WHERE salary_rank <= 3;
 --
 
 
+--585. Investments in 2016
+SELECT ROUND(SUM(tiv_2016),2) as tiv_2016
+FROM INSURANCE
+WHERE tiv_2015 IN 
+
+(
+    SELECT tiv_2015
+    FROM INSURANCE
+    GROUP BY tiv_2015
+    HAVING COUNT(*)>1
+)
+
+AND 
+
+(LAT,LON) IN (
+
+    SELECT LAT,LON
+    FROM INSURANCE
+    GROUP BY LAT,LON
+    HAVING COUNT(*) = 1
+)
+--
+
+
+
+
+
+
 
 
 
