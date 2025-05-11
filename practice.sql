@@ -613,7 +613,23 @@ AND
 )
 --
 
+--602. Friend Requests II: Who Has the Most Friends
+SELECT ID, COUNT(*) AS NUM
+FROM 
+(
+    SELECT REQUESTER_ID AS ID
+FROM RequestAccepted
 
+UNION ALL
+
+SELECT ACCEPTER_ID AS ID
+FROM RequestAccepted
+) AS FRIEND_COUNT
+
+GROUP BY ID
+ORDER BY NUM DESC
+LIMIT 1
+--
 
 
 
