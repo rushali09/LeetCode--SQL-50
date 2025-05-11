@@ -709,6 +709,21 @@ ORDER BY EMPLOYEE_ID
 
 
 
+--Revision Hard, Medium Questions
+
+--Department Top three salaries
+SELECT DEPARTMENT, EMPLOYEE, SALARY
+FROM 
+    (SELECT D.NAME AS DEPARTMENT, 
+            E.NAME EMPLOYEE, 
+            E.SALARY, 
+            DENSE_RANK() OVER (PARTITION BY E.departmentId ORDER BY E.SALARY DESC) AS RNK
+    FROM 
+    EMPLOYEE E 
+    INNER JOIN DEPARTMENT D 
+    ON E.departmentId = D.ID) AS RANKED
+WHERE RNK <= 3
+--
 
 
 
