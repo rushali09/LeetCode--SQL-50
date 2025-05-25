@@ -965,8 +965,11 @@ ORDER BY ID
 
 
 
-
-
+--
+SELECT tweet_id
+FROM TWEETS
+WHERE CHAR_LENGTH(CONTENT) > 15
+--
 
 
 
