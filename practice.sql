@@ -1038,8 +1038,11 @@ GROUP BY E2.managerId
 HAVING COUNT(E2.managerId) >= 5
 --
 
-
-
+--
+SELECT *
+FROM USERS 
+WHERE MAIL REGEXP '^[a-zA-Z][A-Za-z0-9_\.\-]*@LEETCODE[.]COM$'
+--
 
 
 
