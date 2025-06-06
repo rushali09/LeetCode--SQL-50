@@ -1052,6 +1052,28 @@ GROUP BY PRODUCT_NAME
 HAVING UNIT >= 100
 --
 
+--
+SELECT 
+IFNULL((SELECT DISTINCT SALARY AS SecondHighestSalary
+FROM EMPLOYEE
+ORDER BY SALARY DESC
+LIMIT 1,1), NULL)
+AS SecondHighestSalary;
+#LIMIT (N-1),1
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
