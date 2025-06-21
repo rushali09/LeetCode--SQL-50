@@ -1424,6 +1424,26 @@ ORDER BY USER_ID
 
 
 
+SELECT CLASS 
+FROM COURSES 
+GROUP BY CLASS
+HAVING COUNT(*) >= 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
